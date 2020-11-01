@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Kanban Tailwind</title>
+</head>
+
+<body>
+    <div class="h-screen flex">
+        <div class="w-64 px-8 py-4 bg-gray-900 border-r overflow-auto">
+            <img class="h-9 w-9" src="../asstes/img/Logo-Revict-14.png">
+            <nav class="mt-8">
+                <div class="mt-2 -mx-3">
+                    <a href="#"
+                        class="mt-4 ml-3 mb-1 flex justify-between text-sm font-medium text-white  bg-gray-900 rounded-lg">
+                        <i class="material-icons mr-1">import_contacts</i>
+                        <h2 class="text-white font-semibold mt-1 text-xs uppercase tracking-wide mr-40">tarefas</h2>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg">
+                        <span class="text-sm font-bold text-gray-900">Todas</span>
+                        <span class="text-sm font-semibold text-gray-700">11</span>
+                    </a>
+                    <a href="#"
+                        class="mt-1 flex justify-between px-3 py-1 text-sm text-white font-medium bg-gray-900 rounded-lg">
+                        <span class="font-light">Minhas Tarefas</span>
+                        <span class="text-xs font-light text-gray-200">3</span>
+                    </a>
+                    <a href="#"
+                        class="mt-1 flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Em Andamento</span>
+                        <span class="text-xs font-light text-gray-200">1</span>
+                    </a>
+                    <a href="#"
+                        class="mt-1 flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Arquivadas</span>
+                        <span class="text-xs font-light text-gray-200">7</span>
+                    </a>
+                </div>
+                <a href="#" class="mt-4 flex justify-between text-sm font-medium text-white bg-gray-900 rounded-lg">
+                    <i class="material-icons mr-1">push_pin</i>
+                    <h2 class="text-white font-semibold text-xs uppercase tracking-wide mr-40">tags</h2>
+                </a>
+                <div class="mt-1 -mx-3">
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm text-white font-medium bg-gray-900 rounded-lg">
+                        <span class="font-light">Bugs</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Produção</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Git</span>
+                    </a>
+                    <a href="#"
+                        class="mt-4 flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <i class="material-icons">mark_email_read</i>
+                        <span class="mr-16">Mensagens</span>
+                        <span class="text-xs font-semibold text-gray-200">14</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Novas</span>
+                        <span class="text-xs font-light text-gray-200">7</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Rascunho</span>
+                        <span class="text-xs font-light text-gray-200">0</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="font-light">Lixeira</span>
+                        <span class="text-xs font-light text-gray-200">5</span>
+                    </a>
+                    <a href="#"
+                        class="mt-3 flex justify-between px-3 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <i class="material-icons text-green-300">headset_mic</i>
+                        <span class="font-light mr-40 ml-2">Audio</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <i class="material-icons text-red-400">record_voice_over</i>
+                        <span class="font-light mr-20">Enviar Audio</span>
+                    </a>
+                    <a href="#"
+                        class="mt-4 flex justify-between px-3 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg">
+                        <span class="mr-16">Usuários onLine</span>
+                        <span class=" text-green-300">3</span>
+                    </a>
+                </div>
+                <button class="mt-4 flex items-center text-sm font-hairline text-gray-200">
+                    <i class="material-icons">add</i>
+                    <span class="ml-2">Novo Projeto</span>
+                </button>
+            </nav>
+        </div>
+        <div class="flex-1 min-w-0 bg-white flex flex-col">
+            <div class="flex-shrink-0 border-b-2 border-gray-200 py-2 shadow-md">
+                <header class="px-6 mt-2">
+                    <div class="flex justify-between items-center p-3">
+                        <div class="flex-1">
+                            <div class="relative w-64">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-sm text-gray-700">
+                                    <i class="material-icons">search</i>
+                                </span>
+                                <input type="text"
+                                    class="blocl w-full rounded-md border border-gray-400 pl-10 pr-4 py-2 text-sm "
+                                    placeholder="Procurar">
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="-mr-3 z-0 rounded-full">
+                                <img class="w-4 h-4 mb-4" src="../asstes/img/12.png" alt="quantidade de mensages">
+                            </span>
+                            <button>
+                                <i class="material-icons text-gray-700 pt-2">notification_important</i>
+                            </button>
+                            <button class="ml-6">
+                                <img class="h-8 w-8 rounded-full object-cover" src="../asstes/img/profile1good.jpeg"
+                                    alt="Foto de perfil">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-1">
+                        <div class="flex items-center">
+                            <h3 class="pl-4 text-xl font-semibold text-gray-600 leading-tight">Usuários</h3>
+                            <div class="ml-6 flex items-center p-2">
+                                <span class="-ml-1 rounded-full border-2 border-gray-200">
+                                    <img class="h-8 w-8 rounded-full object-cover" src="../asstes/img/profile.jpg"
+                                        alt="Foto de perfil">
+                                </span>
+                                <span class="-ml-2 rounded-full border-2 border-gray-200">
+                                    <img class="h-8 w-8 rounded-full object-cover" src="../asstes/img/profile1good.jpeg"
+                                        alt="Foto de perfil">
+                                </span>
+                                <span class="-ml-2 rounded-full border-2 border-gray-200">
+                                    <img class="h-8 w-8 rounded-full object-cover"
+                                        src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                </span>
+                                <span class="-ml-2 rounded-full border-2 border-gray-200">
+                                    <img class="h-8 w-8 rounded-full object-cover" src="../asstes/img/prof1.jpeg"
+                                        alt="Foto de perfil">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex p-2 py-1">
+                            <span
+                                class="px-2 py-1 inline-flex shadow-lg border bg-gray-200 border-solid border-gray-400 rounded-2xl">
+                                <button class="px-3 rounded">
+                                    <i class="material-icons object-cover text-gray-700 pt-2">playlist_add</i>
+                                </button>
+                                <button
+                                    class="px-3 bg-white rounded-xl shadow-sm border-solid border-2 border-gray-300">
+                                    <i class="material-icons object-cover text-gray-900 pt-2">view_week</i>
+                                </button>
+                            </span>
+                            <button
+                                class="ml-6 pl-4 pr-4 flex items-center p-1 shadow-lg text-sm font-semibold rounded-2xl text-white bg-gray-800 hover:bg-gray-500 hover:text-gray-800">
+                                <i class="material-icons">add</i>
+                                <span class="ml-2 pr-1">New Issue</span>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="flex-1 overflow-auto">
+                <main class="p-3 h-full inline-flex overflow-hidden">
+                    <div class="flex-shrink-0 p-3 bg-gray-200 w-64 rounded-md">
+                        <h3 class="text-sm font-semibold text-gray-700 uppercase">backlog</h3>
+                        <ul class="mt-2">
+                            <li class="p-5 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Criar Cronograma Funcional
+                                        Z-01b.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover" src="../asstes/img/prof1.jpeg"
+                                            alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-teal-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-teal-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-teal-600">Feature request</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                        servidor Web.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 18</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-teal-600 text-sm"></i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-teal-600"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                        Aplicação.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 p-3 ml-2 bg-gray-200 w-64 rounded-md">
+                        <h3 class="text-sm font-semibold text-gray-700 uppercase">to-do</h3>
+                        <ul class="mt-2">
+                            <li class="p-5 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Revisão de funcionalidades
+                                        de filtros.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/db-profile.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-orange-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-orange-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-orange-600">Warning</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Ajustes em funções
+                                        JavaScript.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-red-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-red-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-red-700">Oversight</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 flex flex-col ml-2 bg-gray-200 w-64 rounded-md">
+                        <h3 class="flex-shrink-0 pt-3 px-3 text-sm font-semibold text-gray-700 uppercase">In-Progress
+                        </h3>
+                        <div class="flex-1 min-h-0 overflow-y-auto">
+                            <ul class="pt-1 pb-3 px-3">
+                                <li class="p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Criar Cronograma
+                                            Funcional
+                                            Z-01b.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/prof1.jpeg" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-teal-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600">Feature
+                                                    request</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 flex flex-col ml-2 bg-gray-200 w-64 rounded-md">
+                        <h3 class="flex-shrink-0 pt-3 px-3 text-sm font-semibold text-gray-700 uppercase">Ready to
+                            Review</h3>
+                        <div class="flex-1 min-h-0 overflow-y-auto">
+                            <ul class="pt-1 pb-3 px-3">
+                                <li class="p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Criar Cronograma
+                                            Funcional
+                                            Z-01b.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/prof1.jpeg" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-teal-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600">Feature
+                                                    request</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 p-3 ml-2 bg-gray-200 w-64 rounded-md">
+                        <h3 class="text-sm font-semibold text-gray-700 uppercase">refactory</h3>
+                        <ul class="mt-2">
+                            <li class="p-5 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Revisão de funcionalidades
+                                        de filtros.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/db-profile.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-orange-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-orange-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-orange-600">Warning</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                <a href="#" class="rounded-md block"></a>
+                                <div class="flex justify-between">
+                                    <p class="text-sm font-medium leading-snug text-gray-800">Ajustes em funções
+                                        JavaScript.</p>
+                                    <span class="-ml-2 rounded-full">
+                                        <img class="h-6 w-8 rounded-full object-cover"
+                                            src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                    </span>
+                                </div>
+                                <div class="mt-2 flex justify-between">
+                                    <div class="text-sm text-gray-500 font-thin">
+                                        <time datetime="2020-09-15">Set 15</time>
+                                    </div>
+                                    <div>
+                                        <span class="px-2 py-1 mt-2 inline-flex items-center bg-red-100 rounded-md">
+                                            <i style="font-size: 10px;"
+                                                class="material-icons text-red-600 text-sm">fiber_manual_record</i>
+                                            <span style="font-size: 10px;"
+                                                class="ml-1 text-sm font-medium text-red-700">Oversight</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0 flex flex-col ml-2 bg-gray-200 w-64 rounded-md">
+                        <h3 class="flex-shrink-0 pt-3 px-3 text-sm font-semibold text-gray-700 uppercase">DONE</h3>
+                        <div class="flex-1 min-h-0 overflow-y-auto">
+                            <ul class="pt-1 pb-3 px-3">
+                                <li class="p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Criar Cronograma
+                                            Funcional
+                                            Z-01b.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/prof1.jpeg" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-teal-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600">Feature
+                                                    request</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="p-5 mt-4 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Ajustes no Layout da
+                                            Aplicação.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile_man.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 15</time>
+                                        </div>
+                                        <div>
+                                            <span
+                                                class="px-2 py-1 mt-2 inline-flex items-center bg-blue-100 rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-blue-600 text-sm">fiber_manual_record</i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-700">Design</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li class="mt-4 p-5 rounded-md bg-white shadow-lg">
+                                    <a href="#" class="rounded-md block"></a>
+                                    <div class="flex justify-between">
+                                        <p class="text-sm font-medium leading-snug text-gray-800">Organizar arquivos no
+                                            servidor Web.</p>
+                                        <span class="-ml-2 rounded-full">
+                                            <img class="h-6 w-8 rounded-full object-cover"
+                                                src="../asstes/img/profile-pictures.png" alt="Foto de perfil">
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 flex justify-between">
+                                        <div class="text-sm text-gray-500 font-thin">
+                                            <time datetime="2020-09-15">Set 18</time>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-1 mt-4 inline-flex items-center  rounded-md">
+                                                <i style="font-size: 10px;"
+                                                    class="material-icons text-teal-600 text-sm"></i>
+                                                <span style="font-size: 10px;"
+                                                    class="ml-1 text-sm font-medium text-teal-600"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
