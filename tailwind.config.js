@@ -1,17 +1,18 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
-  theme: {
-    extend: {
-      colors: {
-        cor1: '#A833FF',
-        cor2: '#FF336E'
-      }
+    future: {
+        // removeDeprecatedGapUtilities: true,
+        // purgeLayersByDefault: true,
     },
-  },
-  variants: {},
-  plugins: [],
+    purge: [],
+    theme: {
+        extend: {
+            colors: {
+                cor1: '#A833FF',
+                cor2: '#FF336E'
+            },
+
+        },
+    },
+    variants: {},
+    plugins: [],
 }

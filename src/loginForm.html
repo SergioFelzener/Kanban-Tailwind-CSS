@@ -10,33 +10,26 @@
 </head>
 
 <body class="bg-gray-200">
-    <main class="flex justify-between w-full">
-        <div class="w-full mr-auto ml-auto rounded-3xl">
-            <div class="mr-auto ml-auto mt-16 shadow-lg sm:flex rounded-2xl">
+    <main class="flex justify-between rounded-lg w-full">
+        <div class="max-w-full mr-auto ml-auto">
+            <div class="mr-auto ml-auto mt-16 shadow-lg sm:flex ">
                 <div class="sm:w-2/5 w-full bg-gray-400 bg-cover bg-center text-white " style="background-image: url('../asstes/img/wall01.jpg')">
                     <div class="p-8">
-                        <h1>SIGN<span class="text-indigo-400">UP</span></h1>
-                        <p class="leading-tight mt-2 text-sm text-white">Create an account to join our awesome community</p>
+                        <h1>SIGN<span class="text-indigo-800">UP</span></h1>
+                        <p class="leading-tight mt-2 text-sm text-white">Crie sua conta para fazer login</p>
                     </div>
                 </div>
                 <div class="sm:w-3/5 w-full bg-white">
                     <div class="p-8">
                         <form>
-                            <label for="username" class="text-xs text-gray-500">Username</label>
-                            <input id="username"
-                                class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-gray-700 pb-1"
-                                type="text" placeholder="" />
-                            <label id="passowrd" class="text-xs text-gray-500">Password</label>
-                            <input id="password"
-                                class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1"
-                                type="password" placeholder="" />
-                            <input
-                                class="shadow-lg pt-3 pb-3 w-full text-white bg-indigo-500 hover:bg-indigo-400 rounded-full cursor-pointer "
-                                type="submit" value="Create account">
+                            <label for="user" class="text-xs text-gray-500">Nome</label>
+                            <input id="user" class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-gray-700 pb-1" type="text" placeholder="" />
+                            <label id="pass" class="text-xs text-gray-500">Senha</label>
+                            <input id="pass" class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-grey-700 pb-1" type="password" placeholder="" />
+                            <input class="shadow-lg pt-3 pb-3 w-full text-white bg-indigo-600 hover:bg-indigo-200 hover:text-gray-900 rounded-full cursor-pointer " type="submit" value="Criar conta">
                         </form>
                         <div class="text-center mt-4">
-                            <p class="text-sm text-gray-600">Already have an account? <a href="#"
-                                    class="no-underline text-indigo-500 font-bold hover:text-indigo-400">Sign in</a></p>
+                            <p class="text-sm text-gray-600">Não tem uma conta ? <a href="#" class="no-underline text-indigo-500 font-bold hover:text-indigo-300">Crie aqui</a></p>
                         </div>
                     </div>
                 </div>
@@ -44,4 +37,5 @@
         </div>
     </main>
 </body>
-</html> 
+
+</html>
