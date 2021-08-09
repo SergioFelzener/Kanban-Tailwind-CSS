@@ -6,14 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Kanban Tailwind</title>
+    <title>Tailwind CSS</title>
 </head>
 
 
 <body>
 
-    <div class="container bg-red-400">
+    <div class="container bg-red-300 mx-auto my-4 p-4 text-gray-900 border-2 border-red-700">
         <p>Texto container</p>
+    </div>
+    <!-- Exercicio 1 -->
+    <div class="container bg-green-400 md:bg-blue-800 m-4 p-2 text-white">
+        <p>Exercício 1</p>
+    </div>
+
+    <div class="container bg-red-300 m-4 border-box p-10">
+        <p>Border Box</p>
+    </div>
+    <div class="container bg-purple-300 m-4 box-content p-10">
+        <p>Border content</p>
+    </div>
+    <!-- DISPLAY -->
+    <div class="container">
+        <span class="block bg-teal-300">Nao são elemento de bloco</span>
+        <span class="block bg-purple-400">Nao são elemento de bloco</span>
+        <div class="bg-blue-200 inline-block">Block</div>
+        <div class="bg-blue-600 inline-block">Block</div>
+        <div class="bg-green-600 hidden">Estou aparecendo</div>
+    </div>
+
+    <!-- Exercicio 2 -->
+
+    <div class="container bg-purple-700 p-6 m-6">
+        <div class="bg-blue-400 inline-block">DIV 1</div>
+        <div class="bg-red-400 inline-block">DIV 2</div>
+        <div class="bg-yellow-400 inline-block">DIV 3</div>
+    </div>
+
+    <div class="container bg-purple-400 p-6 m-6">
+        <div class="bg-blue-700 float-right">Float Right</div>
+        <div class="bg-red-700 float-left">Float Left</div>
+        <!-- <div class="clearfix"></div> -->
+        <div class="clearfix"></div>
+        <div class="bg-red-700 float-left p-6 text-red-100">Float Left</div>
+        <div class="bg-blue-700 float-right px-6 text-red-100">Float Right</div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="overflow-hidden h-16 bg-yellow-400 m-6">
+        <p>Teste Overflow Hidden</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+    </div>
+    <div class="overflow-auto h-16 bg-blue-400 m-6 text-white">
+        <p>Teste Overflow Auto</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+    </div>
+    <div class="overflow-auto h-16 bg-blue-400 m-6 text-white">
+        <p>TesteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAe</p>
+    </div>
+
+    <div class="overflow-y-auto h-16 bg-purple-400 m-6 text-white">
+        <p>Teste Overflow Y Auto</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
+        <p>Teste Overflow</p>
     </div>
 
 
