@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Alinhamento Tailwind</title>
+</head>
+
+
+<body>
+    <div class="flex p-2 bg-yellow-300">
+        <div class="bg-yellow-600 p-4 m-4">1</div>
+        <div class="bg-yellow-600 p-4 m-4">2</div>
+        <div class="bg-yellow-600 p-4 m-4">3</div>
+        <div class="bg-yellow-600 p-4 m-4">4</div>
+    </div>
+    <div class="flex p-2 bg-red-300 justify-end">
+        <div class="bg-red-600 p-4 m-4">1</div>
+        <div class="bg-red-600 p-4 m-4">2</div>
+        <div class="bg-red-600 p-4 m-4">3</div>
+        <div class="bg-red-600 p-4 m-4">4</div>
+    </div>
+    <div class="flex p-2 bg-blue-300 justify-center">
+        <div class="bg-blue-600 p-4 m-4">1</div>
+        <div class="bg-blue-600 p-4 m-4">2</div>
+        <div class="bg-blue-600 p-4 m-4">3</div>
+        <div class="bg-blue-600 p-4 m-4">4</div>
+    </div>
+    <div class="flex p-2 bg-purple-300 justify-around">
+        <div class="bg-purple-600 p-4 m-4">1</div>
+        <div class="bg-purple-600 p-4 m-4">2</div>
+        <div class="bg-purple-600 p-4 m-4">3</div>
+        <div class="bg-purple-600 p-4 m-4">4</div>
+    </div>
+    <div class="flex p-2 bg-gray-300 justify-between">
+        <div class="bg-gray-600 p-4 m-4">1</div>
+        <div class="bg-gray-600 p-4 m-4">2</div>
+        <div class="bg-gray-600 p-4 m-4">3</div>
+        <div class="bg-gray-600 p-4 m-4">4</div>
+    </div>
+    <div class="flex p-2 bg-green-300 justify-center">
+        <div class="bg-red-600 p-4 m-4 border border-gray-500">1</div>
+        <div class="bg-green-600 p-4 m-4 border border-gray-500">2</div>
+        <div class="bg-red-600 p-4 m-4 border border-gray-500">3</div>
+        <div class="bg-green-600 p-4 m-4 border border-gray-500">4</div>
+        <div class="bg-red-600 p-4 m-4 border border-gray-500">5</div>
+        <div class="bg-green-600 p-4 m-4 border border-gray-500">6</div>
+    </div>
+
+    <div class="bg-purple-300 h-40 flex flex-wrap content-end">
+        <div class="bg-purple-600 h-10 p-2 mx-4">1</div>
+        <div class="bg-purple-600 h-10 p-2 mx-4">2</div>
+        <div class="bg-purple-600 h-10 p-2 mx-4">3</div>
+    </div>
+    <div class="bg-red-300 h-40 flex flex-wrap content-center">
+        <div class="bg-red-600 h-10 p-2 mx-4">1</div>
+        <div class="bg-red-600 h-10 p-2 mx-4">2</div>
+        <div class="bg-red-600 h-10 p-2 mx-4">3</div>
+    </div>
+    <div class="bg-blue-300 h-40 flex flex-wrap content-start">
+        <div class="bg-blue-600 h-10 p-2 mx-4">1</div>
+        <div class="bg-blue-600 h-10 p-2 mx-4">2</div>
+        <div class="bg-blue-600 h-10 p-2 mx-4">3</div>
+    </div>
+    <div class="bg-teal-300 h-40 flex flex-wrap content-around">
+        <div class="bg-teal-600 h-10 p-2 w-1/3">1</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">2</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">3</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">4</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">5</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">6</div>
+    </div>
+    <div class="bg-teal-300 h-40 flex flex-wrap content-between">
+        <div class="bg-teal-600 h-10 p-2 w-1/3">1</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">2</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">3</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">4</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">5</div>
+        <div class="bg-teal-600 h-10 p-2 w-1/3">6</div>
+    </div>
+
+    <div class="bg-purple-400 flex h-40 items-start">
+        <div class="bg-purple-700 m-2 p-2">1</div>
+        <div class="bg-purple-700 m-2 p-2">2</div>
+        <div class="bg-purple-700 m-2 p-2">3</div>
+        <div class="bg-purple-700 m-2 p-2">4</div>
+    </div>
+    <!-- Padrao  -->
+    <div class="bg-red-400 flex h-40">
+        <div class="bg-purple-700 m-2 p-2">1</div>
+        <div class="bg-purple-700 m-2 p-2">2</div>
+        <div class="bg-purple-700 m-2 p-2">3</div>
+        <div class="bg-purple-700 m-2 p-2">4</div>
+    </div>
+    <div class="bg-blue-400 flex h-40 items-center">
+        <div class="bg-purple-700 m-2 p-2">1</div>
+        <div class="bg-purple-700 m-2 p-2">2</div>
+        <div class="bg-purple-700 m-2 p-2">3</div>
+        <div class="bg-purple-700 m-2 p-2">4</div>
+    </div>
+
+
+    <div class="bg-yellow-400 grid grid-cols-3 h-40 place-content-start">
+        <div class="bg-red-600 p-2 m-2">1</div>
+        <div class="bg-red-400 p-2 m-2">2</div>
+        <div class="bg-red-600 p-2 m-2">3</div>
+        <div class="bg-red-400 p-2 m-2">4</div>
+        <div class="bg-red-600 p-2 m-2">5</div>
+        <div class="bg-red-400 p-2 m-2">6</div>
+    </div>
+    <div class="bg-blue-400 grid grid-cols-3 h-40 place-content-end">
+        <div class="bg-red-600 p-2 m-2">1</div>
+        <div class="bg-red-400 p-2 m-2">2</div>
+        <div class="bg-red-600 p-2 m-2">3</div>
+        <div class="bg-red-400 p-2 m-2">4</div>
+        <div class="bg-red-600 p-2 m-2">5</div>
+        <div class="bg-red-400 p-2 m-2">6</div>
+    </div>
+    <div class="bg-yellow-400 grid grid-cols-3 h-48 place-content-between">
+        <div class="bg-red-600 p-2 m-2">1</div>
+        <div class="bg-red-400 p-2 m-2">2</div>
+        <div class="bg-red-600 p-2 m-2">3</div>
+        <div class="bg-red-400 p-2 m-2">4</div>
+        <div class="bg-red-600 p-2 m-2">5</div>
+        <div class="bg-red-400 p-2 m-2">6</div>
+        <div class="bg-red-400 p-2 m-2">7</div>
+        <div class="bg-red-600 p-2 m-2">8</div>
+        <div class="bg-red-400 p-2 m-2">9</div>
+    </div>
+    <div class="bg-purple-400 grid grid-cols-3 h-48 place-content-around">
+        <div class="bg-red-600 p-2 m-2">1</div>
+        <div class="bg-red-400 p-2 m-2">2</div>
+        <div class="bg-red-600 p-2 m-2">3</div>
+        <div class="bg-red-400 p-2 m-2">4</div>
+        <div class="bg-red-600 p-2 m-2">5</div>
+        <div class="bg-red-400 p-2 m-2">6</div>
+        <div class="bg-red-400 p-2 m-2">7</div>
+        <div class="bg-red-600 p-2 m-2">8</div>
+        <div class="bg-red-400 p-2 m-2">9</div>
+    </div>
+
+    <p class="m-20">Espacámento</p>
+    <p class="m-20">Espacámento</p>
+    <p class="m-20">Espacámento</p>
+    <p class="m-20">Espacámento</p>
+    <p class="m-20">Espacámento</p>
+    <p class="m-20">Espacámento</p>
+
+</body>
+
+</html>
