@@ -1,5 +1,5 @@
 {
-  "name": "Tailwind",
+  "name": "tipografia",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "caniuse-lite": "^1.0.30001251",
-    "material-design-icons": "^3.0.1",
-    "tailwindcss": "^1.9.5",
-    "vue": "^2.6.12"
+    "tailwindcss": "^2.2.8"
   }
 }
